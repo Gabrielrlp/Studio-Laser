@@ -20,7 +20,7 @@ html{
 
 body{
     background-color: var(--cor1);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* HEADER */
@@ -40,7 +40,7 @@ header img{
 nav{
     display: flex;
     gap: 70px;
-    font-size: 24px;
+    font-size: 26px;
 }
 
 nav a{
@@ -59,7 +59,7 @@ nav a:hover{
 /* HERO */
 
 .hero{
-    min-height: 80vh;
+    min-height: 65vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,7 +92,7 @@ nav a:hover{
 
 .btn:hover{
     background: #25D366;
-    transform: scale(1.08);
+    transform: translateY(-4px);
 }
 
 .btn-2{
@@ -114,7 +114,7 @@ nav a:hover{
     #fd1d1d,
     #fcb045
 );
-    transform: scale(1.08);
+    transform: translateY(-4px);
 }
 
 /* SERVIÇOS */
@@ -145,10 +145,11 @@ nav a:hover{
     text-align: center;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     transition: 0.3s;
+    border: 1px solid rgba(0,0,0,0.05);
 }
 
 .card:hover{
-    transform: translateY(-10px);
+    transform: translateY(-10px) scale(1.02);
 }
 
 .card i{
@@ -174,6 +175,7 @@ nav a:hover{
     color: white;
     font-size: 2.5rem;
     margin-bottom: 40px;
+    
 }
 
 .formulario{
@@ -182,6 +184,10 @@ nav a:hover{
     gap: 20px;
     max-width: 500px;
     margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
 .formulario input{
@@ -189,11 +195,12 @@ nav a:hover{
     border: none;
     border-radius: 10px;
     font-size: 1rem;
+    border: 2px solid #ddd;
 }
 
 .formulario button{
-    background: var(--cor4);
-    color: var(--cor2);
+    background: var(--cor2);
+    color: white;
     border: none;
     padding: 15px;
     border-radius: 10px;
@@ -204,7 +211,57 @@ nav a:hover{
 }
 
 .formulario button:hover{
-    transform: scale(1.03);
+    transform: translateY(-5px) scale(1.02);
+
+}
+
+/* DIFERENCIAIS */
+
+.diferenciais{
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.diferenciais h2{
+    color: var(--cor2);
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.diferenciais-container{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.diferencial{
+    background: white;
+
+    width: 240px;
+
+    padding: 30px 20px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+
+    transition: 0.3s;
+}
+
+.diferencial:hover{
+    transform: translateY(-8px);
+}
+
+.diferencial i{
+    font-size: 2.5rem;
+    color: var(--cor4);
+    margin-bottom: 20px;
+}
+
+.diferencial p{
+    color: var(--cor2);
+    font-weight: 600;
 }
 
 /* LOCAL */
@@ -232,14 +289,11 @@ nav a:hover{
     width: 320px;
     padding: 30px 25px;
     border-radius: 25px;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-
     transition: 0.3s;
 }
 
@@ -257,13 +311,10 @@ nav a:hover{
 .btn-local{
     background: var(--cor2);
     color: var(--white);
-
     padding: 14px 28px;
     border-radius: 40px;
-
     text-decoration: none;
     font-weight: bold;
-
     transition: 0.3s;
 }
 
@@ -289,6 +340,12 @@ nav a:hover{
     font-size: 2rem;
     text-decoration: none;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+#mensagem{
+    margin-top: 10px;
+    color: #ff4d4d;
+    font-weight: bold;
 }
 
 /* FOOTER */
@@ -331,9 +388,176 @@ footer a:hover{
 }
 
 @media(max-width: 440px){
+
+    /* HEADER */
+
+    header{
+        padding: 15px 5%;
+    }
+
+    header img{
+        width: 130px;
+    }
+
     nav{
-        display: flex;
-        font-size: 17px;
-        gap: 25px;
+        gap: 12px;
+        font-size: 18px;
+
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* HERO */
+
+    .hero{
+        min-height: 60vh;
+        padding: 50px 5%;
+    }
+
+    .hero-text h1{
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+
+    .hero-text p{
+        font-size: 1.05rem;
+        line-height: 1.5;
+    }
+
+    .btn,
+    .btn-2{
+        width: 100%;
+
+        max-width: 320px;
+
+        font-size: 0.95rem;
+
+        padding: 14px 20px;
+    }
+
+    /* SEÇÕES */
+
+    .servicos,
+    .diferenciais,
+    .agendamento,
+    .local{
+        padding: 60px 5%;
+    }
+
+    /* TÍTULOS */
+
+    .servicos h2,
+    .diferenciais h2,
+    .agendamento h2,
+    .local h2{
+        font-size: 2rem;
+        margin-bottom: 35px;
+    }
+
+    /* CARDS */
+
+    .card,
+    .diferencial,
+    .local-card{
+        width: 100%;
+    }
+
+    .card{
+        padding: 25px;
+    }
+
+    .card p,
+    .local-card p{
+        font-size: 0.95rem;
+    }
+
+    /* DIFERENCIAIS MOBILE */
+
+    .diferenciais-container{
+        gap: 15px;
+    }
+
+    .diferencial{
+        min-height: 160px;
+        padding: 20px 15px;
+    }
+
+    .diferenciais h2{
+        font-size: 1.8rem;
+    }
+
+    .diferencial i{
+        font-size: 2rem;
+    }
+
+    .diferencial p{
+        font-size: 0.9rem;
+    }
+
+    /* DIFERENCIAIS MOBILE */
+
+    .diferenciais-container{
+        gap: 15px;
+    }
+
+    .diferencial{
+        width: 47%;
+
+        padding: 20px 15px;
+
+        min-height: 150px;
+    }
+
+    /* TERCEIRO CARD MAIOR */
+
+    .diferencial:nth-child(3){
+        width: 96%;
+        height: 0%;
+    }
+
+    .diferencial i{
+        font-size: 2rem;
+    }
+
+    .diferencial p{
+        font-size: 0.9rem;
+    }
+
+    /* FORMULÁRIO */
+
+    .formulario{
+        padding: 25px;
+    }
+
+    .formulario input,
+    .formulario button{
+        font-size: 0.95rem;
+    }
+
+    /* BOTÃO LOCAL */
+
+    .btn-local{
+        width: 100%;
+        text-align: center;
+    }
+
+    /* WHATSAPP */
+
+    .whatsapp{
+        width: 55px;
+        height: 55px;
+
+        font-size: 1.7rem;
+
+        right: 15px;
+        bottom: 15px;
+    }
+
+    /* FOOTER */
+
+    footer{
+        font-size: 14px;
+        padding: 25px 15px;
+        line-height: 1.6;
     }
 }
